@@ -1,0 +1,23 @@
+{
+  "full_name": "Ash Berlin-Taylor",
+  "email": "ash@apache.org",
+  "github_username": "ashb",
+  "project_name": "python-project-name",
+  "module_name": "{{ cookiecutter.project_name|lower|replace('-', '_') }}",
+  "description": "Project short description.",
+  "version": "0.0.1",
+  "docs_tool": [
+    "sphinx",
+    "mkdocs",
+    "none"
+  ],
+  "license": [
+    "MIT",
+    "BSD-3-Clause",
+    "Apache-2.0",
+    "MPL-2.0"
+  ],
+  "_extensions": [
+    "jinja2_time.TimeExtension"
+  ]
+}
