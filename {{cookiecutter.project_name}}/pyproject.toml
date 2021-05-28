@@ -7,9 +7,13 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^{{ cookiecutter.min_python_version }}"
+{%- if cookiecutter.min_python_version | float <= 3.6 %}
 pep562 = { version = "^1", python = "<3.7" }
+{% endif -%}
+{%- if cookiecutter.min_python_version | float <= 3.7 %}
 importlib-metadata = { version = "*^4", python = "<3.8" }
+{%- endif %}
 
 [tool.poetry.dev-dependencies]
 vulture = "^1.0"

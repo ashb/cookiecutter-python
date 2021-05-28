@@ -19,6 +19,7 @@ Takes inspiration from these
 - importlib.metadata for setting `__version__`
 - A choice of licenses for your project
 - Sphinx or mkdocs for docs
+- A choice of minimum supported python version (3.6...3.9  currently)
 
 
 [pre-commit]: https://pre-commit.com/

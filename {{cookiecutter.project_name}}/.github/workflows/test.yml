@@ -1,3 +1,5 @@
+{% set min_python_version = cookiecutter.min_python_version | float -%}
+{% set possible_python_versions = [3.6, 3.7, 3.8, 3.9] -%}
 {% raw -%}
 name: Test
 
@@ -13,7 +15,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: [3.6, 3.9]
+{%- endraw %}
+        python-version: {{ possible_python_versions | reject("lt", min_python_version) | list }}
+{%- raw %}
         os: [ubuntu-latest]
     env:
       PYTHON: ${{ matrix.python-version }}
