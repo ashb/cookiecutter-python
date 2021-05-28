@@ -23,6 +23,7 @@
     "3.8",
     "3.9"
   ],
+  "install_deps_now": [ "False", "True" ],
   "_extensions": [
     "jinja2_time.TimeExtension"
   ]

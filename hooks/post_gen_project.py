@@ -63,6 +63,7 @@ def precommit_install():
 if __name__ == "__main__":
     move_docs_files("{{cookiecutter.docs_tool}}", DOCS_FILES_BY_TOOL, DOCS_SOURCES)
     remove_temp_folders(ALL_TEMP_FOLDERS)
-    install_deps()
+    if {{ cookiecutter.install_deps_now }}:
+        install_deps()
     make_git()
     precommit_install()
