@@ -47,6 +47,7 @@ skip = [
   "tests",
   "docs/",
   "pyproject.toml",
+  "poetry.lock",
   "CHANGELOG.md",
   "README.md",
   ".flake8",
