@@ -50,6 +50,7 @@ jobs:
     - name: Lint
       run: |
         pre-commit run --all-files -v --show-diff-on-failure
+        poetry run pytest --dead-fixtures --dup-fixtures
         pre-commit gc
     - name: Test with pytest
       run: |

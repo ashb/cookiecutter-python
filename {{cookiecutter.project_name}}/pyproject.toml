@@ -26,6 +26,7 @@ mypy = "~0.812"
 ipython = "^7.7"
 pytest = "^6.0"
 pytest-cov = "^2.7"
+pytest-deadfixtures = "^2.2.1"
 pep8-naming = "^0.8.2"
 cruft = "^2.2"
 
