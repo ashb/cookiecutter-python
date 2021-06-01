@@ -58,3 +58,10 @@ skip = [
   ".flake8",
   ".git",
 ]
+
+[tool.pytest.ini_options]
+addopts = "--strict-markers"
+
+[tool.coverage.run]
+omit = ["tests/*","**/__main__.py"]
+branch = true
