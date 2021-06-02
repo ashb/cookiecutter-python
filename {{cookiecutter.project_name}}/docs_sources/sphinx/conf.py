@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import toml
 
 # -- General configuration ------------------------------------------------
@@ -39,7 +41,9 @@ author = '{{cookiecutter.full_name}}'
 
 
 try:
-    version = toml.load('pyproject.toml')['tool']['poetry']['version']
+    root = Path(__file__).parents[1]
+    pyproject = root / 'pyproject.toml'
+    version = toml.load(pyproject)['tool']['poetry']['version']
 except toml.TomlDecodeError:
     version = "0.0.0dev0"
 # The full version, including alpha/beta/rc tags.
